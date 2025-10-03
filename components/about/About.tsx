@@ -67,7 +67,6 @@ mentoring, and leadership with skills in project management, database systems, a
                 <AnimateSkill src="/images/tailwind.png" alt="Tailwind" className="w-10 h-6" delay={3.0} />
                 <AnimateSkill src="/images/figma.png" alt="Figma" className="w-7 h-10" delay={3.5} />
                 <AnimateSkill src="/images/sql.png" alt="SQL" className="w-20 h-15" delay={4.0} />
-                <AnimateSkill src="/images/c.png" alt="C" className="w-12 h-12" delay={4.5} />
               </div>
             </div>
 

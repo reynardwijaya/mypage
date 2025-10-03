@@ -1,9 +1,10 @@
 "use client"
 
 import { createContext, useEffect, useState } from "react"
+import type LocomotiveScrollType from "locomotive-scroll"
 
 export const SmoothScrollContext = createContext({
-  scroll: null as LocomotiveScroll | null,
+  scroll: null as LocomotiveScrollType | null,
 })
 
 interface SmoothScrollProviderProps {
@@ -15,7 +16,7 @@ export const SmoothScrollProvider = ({
   children,
   options,
 }: SmoothScrollProviderProps) => {
-  const [scroll, setScroll] = useState<LocomotiveScroll | null>(null)
+  const [scroll, setScroll] = useState<LocomotiveScrollType | null>(null)
 
   useEffect(() => {
     if (!scroll) {
@@ -27,7 +28,7 @@ export const SmoothScrollProvider = ({
             new LocomotiveScroll({
               el: document.querySelector("[data-scroll-container]"),
               ...options,
-            })
+            }) as LocomotiveScrollType // pastikan tipe sesuai
           )
         } catch (error) {
           throw Error(`[SmoothScrollProvider]: ${error}`)

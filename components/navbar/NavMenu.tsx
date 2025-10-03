@@ -3,8 +3,7 @@
 import useIsomorphicLayoutEffect from "@/hooks/UseIsomorphicLayoutEffect"
 import { cn } from "@/lib/utils"
 import gsap from "gsap"
-import { useEffect, useRef, useState } from "react"
-import ThemeSwitcher from "../ThemeSwitcher"
+import { useRef, useState } from "react"
 import MagneticEffect from "../providers/MagneticEffect"
 import NavMenuBtn from "./NavMenuBtn"
 import NavMenuLine from "./NavMenuLine"
@@ -81,16 +80,16 @@ export default function NavMenu() {
       <div
         ref={menuRef}
         className={cn(
-          "nav-menu pointer-events-auto absolute right-0 top-0 flex h-full w-full max-w-lg translate-x-[150%] flex-col justify-between bg-zinc-800 pb-12 pt-[clamp(3.5rem,10vh,5rem)] text-6xl text-white will-change-transform [-webkit-perspective:1000] dark:bg-zinc-200"
+          "nav-menu pointer-events-auto absolute right-0 top-0 flex h-full w-full max-w-lg translate-x-[150%] flex-col justify-between bg-zinc-800 pb-12 pt-[clamp(3.5rem,10vh,5rem)] text-6xl text-white will-change-transform dark:bg-zinc-200"
         )}
       >
-        <div className="nav-rounded absolute left-0 top-[-10%] z-[-1] h-[120%] w-[80%] -translate-x-1/2 rounded-[100%_100%] bg-zinc-800 will-change-transform [-webkit-perspective:1000] dark:bg-zinc-200"></div>
+        {/* Rounded background */}
+        <div className="nav-rounded absolute left-0 top-[-10%] z-[-1] h-[120%] w-[80%] -translate-x-1/2 rounded-[100%_100%] bg-zinc-800 will-change-transform dark:bg-zinc-200"></div>
 
+        {/* Navigation links */}
         <div>
           <NavMenuLine title={"Navigation"} />
-        </div>
 
-        <div>
           <MagneticEffect>
             <NavMenuLink
               title={"Home"}
@@ -109,7 +108,6 @@ export default function NavMenu() {
             />
           </MagneticEffect>
 
-          {/* ✨ Dipindah: Experiences sekarang langsung di bawah About */}
           <MagneticEffect>
             <NavMenuLink
               title={"Experiences"}
@@ -138,9 +136,12 @@ export default function NavMenu() {
           </MagneticEffect>
         </div>
 
+        {/* Links section */}
         <div>
           <NavMenuLine title={"Links"} />
-          <div className="flex gap-x-2 px-[clamp(1.25rem,3vw,2.5rem)] text-base">
+
+          {/* Social links tepat di bawah garis */}
+          <div className="flex gap-x-4 px-[clamp(1.25rem,3vw,2.5rem)] text-base mt-2">
             <MagneticEffect>
               <NavMenuSocial
                 title="Github"
@@ -169,13 +170,11 @@ export default function NavMenu() {
               />
             </MagneticEffect>
           </div>
-
-          <div className="flex px-[clamp(1.25rem,3vw,2.5rem)] mt-[-35px]">
-            <ThemeSwitcher />
-          </div>
         </div>
+
       </div>
 
+      {/* Hamburger button */}
       <NavMenuBtn active={active} toggleHamburger={toggleHamburger} />
     </>
   )
