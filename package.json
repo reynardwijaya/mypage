@@ -19,7 +19,6 @@
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^8.15.10",
     "@types/three": "^0.158.2",
-    "blobity": "^0.2.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
