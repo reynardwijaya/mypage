@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import HeroText from "./HeroText"
 import ParallaxText from "./ParallaxText"
-import HeroGraphic from "./HeroGraphic"
 import Aurora from "../ui/Aurora"
 import NavHome from "../navbar/NavHome"
 
@@ -29,17 +28,8 @@ export default function Hero() {
           <HeroText />
         </div>
 
-        {/* Kanan: Graphic */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1, ease: [0.2, 0.65, 0.3, 0.9] }}
-          className="flex-1 w-full flex justify-center md:justify-center 
-             max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg 
-             md:-translate-x-12 lg:-translate-x-16"
-        >
-          <HeroGraphic />
-        </motion.div>
+        {/* Kanan: HeroGraphic dihapus */}
+        {/* Tidak ada div / konten di sini */}
       </div>
 
       {/* Parallax Text */}
