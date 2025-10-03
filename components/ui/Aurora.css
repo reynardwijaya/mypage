@@ -1,0 +1,7 @@
+.aurora-container {
+    position: absolute;
+    inset: 0;         /* penuh layar */
+    z-index: -1;      /* di belakang konten */
+    pointer-events: none;
+  }
+  
