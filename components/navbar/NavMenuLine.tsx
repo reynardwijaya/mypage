@@ -1,5 +1,4 @@
 import React from "react"
-import { Separator } from "../ui/Separator"
 
 interface NavMenuLineProps {
   title: string
@@ -11,7 +10,7 @@ export default function NavMenuLine({ title }: NavMenuLineProps) {
       <span className="text-xl font-semibold text-zinc-200 dark:text-zinc-800">
         {title}
       </span>
-      <Separator className="mt-2 mb-2 bg-zinc-200/50 dark:bg-zinc-800/25" />
+      <div className="h-[1px] w-full mt-2 mb-2 bg-zinc-200/50 dark:bg-zinc-800/25" />
     </div>
   )
 }
