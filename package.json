@@ -9,8 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev --dir ./email",
-    "postinstall": "npm install --legacy-peer-deps"
+    "email": "email dev --dir ./email"
   },
   "dependencies": {
     "@motionone/utils": "^10.16.3",
