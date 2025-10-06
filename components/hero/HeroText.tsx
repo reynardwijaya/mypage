@@ -29,7 +29,7 @@ export default function HeroText() {
              backdrop-blur-lg shadow-xl cursor-grab active:cursor-grabbing
              w-[300px] h-[400px] 
              max-sm:w-[200px] max-sm:h-[260px]
-             -mt-20 sm:mt-0"   // 👈 naik di mobile
+             -mt-5 sm:mt-0"   // 👈 naik di mobile
 >
 
   <Image
@@ -43,10 +43,6 @@ export default function HeroText() {
 
   <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 via-transparent to-black/20 pointer-events-none" />
 </motion.div>
-
-
-
-
 
       {/* Right side - Text (desktop: kanan) */}
       <div className="flex flex-col flex-1 px-2 sm:px-4 lg:px-12 gap-6 md:gap-8 
@@ -116,7 +112,7 @@ export default function HeroText() {
             </motion.div>
 
             {/* Social + CV */}
-            <div className="flex items-center gap-4 mt-4 md:mt-0">
+            <div className="flex items-center gap-4 mt-0 md:mt-0">
               {/* LinkedIn */}
               <motion.a
                 href="https://www.linkedin.com/in/reynard-wijaya-377713294/"

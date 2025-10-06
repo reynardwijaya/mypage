@@ -38,11 +38,12 @@ export default function Preload({ endedLoading }: PreloadProps) {
 
   return (
     <div
-      className={cn(
-        "relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden opacity-100 transition-all duration-700 ease-in-out px-4",
-        endedLoading && "opacity-0"
-      )}
-    >
+  className={cn(
+    "relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden opacity-100 transition-all duration-700 ease-in-out px-4 pt-8 sm:pt-0",
+    endedLoading && "opacity-0"
+  )}
+>
+
       {/* Aurora background */}
       <Aurora
   colorStops={["#00b4ff", "#00ffd5", "#001122"]}

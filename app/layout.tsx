@@ -65,33 +65,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "relative min-h-screen antialiased transition-colors duration-500",
-          "bg-white text-black dark:bg-neutral-900 dark:text-zinc-50",
-          font.className
-        )}
-      >
-        {/* Aurora di background */}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          storageKey="theme-mode"
-        >
-          <SmoothScrollProvider
-            options={{
-              smooth: true,
-              mobile: { smooth: true },
-              tablet: { smooth: true },
-            }}
-          >
-            {/* Konten halaman */}
-            <main className="relative z-10">{children}</main>
-          </SmoothScrollProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <html lang="en" suppressHydrationWarning className="dark">
+  <body
+    className={cn(
+      "relative min-h-screen antialiased transition-colors duration-500 bg-background text-foreground",
+      font.className
+    )}
+  >
+    <SmoothScrollProvider
+      options={{
+        smooth: true,
+        mobile: { smooth: true },
+        tablet: { smooth: true },
+      }}
+    >
+      <main className="relative z-10">{children}</main>
+    </SmoothScrollProvider>
+  </body>
+</html>
   )
 }

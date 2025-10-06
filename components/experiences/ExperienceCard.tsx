@@ -46,7 +46,7 @@ export default function ExperienceCard({
   animate={ctrls}
   initial="hidden"
   variants={experienceCardAnimation}
-  className="relative z-10 w-[280px] min-h-[400px] rounded-2xl border border-gray-700 bg-[#1a1a1a] px-5 py-5 pb-20 shadow-lg flex flex-col"
+  className="relative z-10 w-[280px] min-h-[400px] rounded-2xl border border-gray-700 bg-zinc-200 dark:bg-zinc-800 px-5 py-5 pb-20 shadow-lg flex flex-col"
 >
   {/* Gambar Background */}
   <motion.div

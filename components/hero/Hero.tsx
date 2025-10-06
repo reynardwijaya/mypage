@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Aurora Background */}
       <Aurora />
 
-      {/* Navbar transparan blur */}
+      {/* Navbar */}
       <NavHome />
 
       {/* Main Content */}
@@ -27,9 +27,6 @@ export default function Hero() {
         <div className="flex-1 w-full text-center md:text-left">
           <HeroText />
         </div>
-
-        {/* Kanan: HeroGraphic dihapus */}
-        {/* Tidak ada div / konten di sini */}
       </div>
 
       {/* Parallax Text */}
