@@ -64,10 +64,12 @@ export default function HeroText() {
             <ShinyText text="Hi There 👋" speed={2} />
           </motion.p>
 
-          {/* Typing Name */}
-          <div className="text-4xl font-bold text-foreground lg:text-6xl md:whitespace-nowrap">
-            <TypingText text="I'm Reynard Wijaya" delay={1.3} />
-          </div>
+        {/* Typing Name */}
+        <div className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-foreground whitespace-nowrap overflow-visible leading-tight lg:leading-[1.1]">
+        <TypingText text="I'm Reynard Wijaya" delay={1.6} />
+        </div>
+
+
 
           {/* Nickname */}
           <motion.p
