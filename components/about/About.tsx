@@ -8,8 +8,43 @@ import AnimateTitle from "./AnimateTitle"
 import Animatepict from "./Animatepict"
 import AnimateSkill from "./AnimateSkill"
 import ShinyText from "@/components/ui/ShinyText"
+import { motion } from "framer-motion"
 
 export default function About() {
+  // Variant untuk animasi container dan item
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.45, 
+        delayChildren: 1.2, 
+      },
+    },
+  }
+
+  const item = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  }
+
+  // Daftar skill dengan ukuran berbeda-beda
+  const skills = [
+    { src: "/images/react.png", alt: "React", className: "w-10 h-10" },
+    { src: "/images/laravel.png", alt: "Laravel", className: "w-10 h-10" },
+    { src: "/images/phyton.png", alt: "Python", className: "w-10 h-10" },
+    { src: "/images/sql.png", alt: "SQL", className: "w-18 h-14" },
+    { src: "/images/html.png", alt: "HTML", className: "w-10 h-10" },
+    { src: "/images/css.png", alt: "CSS", className: "w-10 h-10" },
+    { src: "/images/tailwind.png", alt: "Tailwind", className: "w-10 h-6" },
+    { src: "/images/figma.png", alt: "Figma", className: "w-7 h-10" },
+    { src: "/images/github.png", alt: "Github", className: "w-11 h-11" },
+  ]
+
   return (
     <section
       id="about"
@@ -19,7 +54,7 @@ export default function About() {
         {/* Title */}
         <div className="mb-10 flex w-full items-center justify-between gap-x-2 md:mb-16">
           <AnimateTitle
-           title="About me"
+            title="About me"
             className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter sm:text-[45px] md:text-[60px] lg:text-[80px]"
             wordSpace="mr-[14px]"
             charSpace="mr-[0.0001em]"
@@ -28,24 +63,22 @@ export default function About() {
         </div>
 
         <div className="mx-auto flex w-full flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
-          {/* Bagian paragraf */}
+          {/* Paragraf kiri */}
           <div className="lg:mg-16 mb-10 flex w-full flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide md:mb-16 md:gap-6 md:text-lg md:leading-relaxed lg:max-w-[90%]">
             <AnimateParagraph
-              paragraph="Fifth-semester Computer Science student with experience as a Teaching Assistant, Duta BINUSIAN 
-Scholarship awardee, Top 3 peer mentor, and organizational leader."
+              paragraph="Hi! I’m a fifth-semester Computer Science student with experience as a Teaching Assistant, Duta BINUSIAN Scholarship awardee, Top 3 peer mentor, and organizational leader."
               delay={1.5}
             />
             <AnimateParagraph
-              paragraph="Strong background in programming, 
-mentoring, and leadership with skills in project management, database systems, and web & app development. "
+              paragraph="I have strong foundations in web and app development, combined with proven leadership and collaborative teamwork skills."
               delay={1.8}
             />
             <AnimateParagraph
-              paragraph="Result-driven learner with a growth mindset, passionate about continuous learning and leading diverse teams."
+              paragraph="Driven by curiosity and a growth mindset, I’m passionate about continuous learning and creating impactful, user-centered digital solutions."
               delay={2}
             />
             <AnimateParagraph
-              paragraph="Particularly interested in software engineering and full-stack development, with a focus on delivering innovative and impactful digital solutions."
+              paragraph="I’m eager to keep growing as a developer, collaborate with inspiring people, and build meaningful products that bring value to users."
               delay={2.5}
             />
           </div>
@@ -55,19 +88,26 @@ mentoring, and leadership with skills in project management, database systems, a
             {/* Tech Stack */}
             <div className="flex flex-col gap-4 md:gap-3">
               <AnimateHeading
-                title={<ShinyText text="Tech Stack" />}
+                title={<ShinyText text="Tech Stack & Technologies" />}
                 delay={0.5}
               />
-              <div className="flex flex-wrap items-center gap-4 mt-2">
-                <AnimateSkill src="/images/react.png" alt="React" className="w-10 h-10" delay={0.5} />
-                <AnimateSkill src="/images/phyton.png" alt="phyton" className="w-10 h-10" delay={1.0} />
-                <AnimateSkill src="/images/laravel.png" alt="Laravel" className="w-10 h-10" delay={1.5} />
-                <AnimateSkill src="/images/html.png" alt="HTML" className="w-10 h-10" delay={2.0} />
-                <AnimateSkill src="/images/css.png" alt="CSS" className="w-10 h-10" delay={2.5} />
-                <AnimateSkill src="/images/tailwind.png" alt="Tailwind" className="w-10 h-6" delay={3.0} />
-                <AnimateSkill src="/images/figma.png" alt="Figma" className="w-7 h-10" delay={3.5} />
-                <AnimateSkill src="/images/sql.png" alt="SQL" className="w-20 h-15" delay={4.0} />
-              </div>
+
+              <motion.div
+                variants={container}
+                initial="hidden"
+                animate="visible"
+                className="flex flex-wrap items-center gap-4 mt-2"
+              >
+                {skills.map((skill, i) => (
+                  <motion.div key={i} variants={item}>
+                    <AnimateSkill
+                      src={skill.src}
+                      alt={skill.alt}
+                      className={skill.className}
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
 
             {/* Avatar */}

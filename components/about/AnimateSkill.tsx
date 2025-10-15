@@ -1,7 +1,8 @@
 "use client"
 
-import { motion, useAnimation, useInView } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { useState } from "react"
 
 interface AnimateSkillProps {
   src: string
@@ -13,44 +14,44 @@ interface AnimateSkillProps {
 export default function AnimateSkill({
   src,
   alt,
-  className,
+  className = "",
   delay = 0,
 }: AnimateSkillProps) {
-  const ref = useRef<HTMLImageElement | null>(null)
-  const ctrls = useAnimation()
-  const inView = useInView(ref)
-
-  useEffect(() => {
-    if (inView) {
-      ctrls.start("visible")
-    }
-  }, [ctrls, inView])
-
-  const AnimationSkill = {
-    hidden: {
-      opacity: 0,
-      y: "1em", // mulai dari bawah
-    },
-    visible: {
-      opacity: 1,
-      y: "0em",
-      transition: {
-        duration: 1.2,
-        delay: delay,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  }
+  const [hovered, setHovered] = useState(false)
 
   return (
-    <motion.img
-      ref={ref}
-      src={src}
-      alt={alt}
-      className={className}
-      initial="hidden"
-      animate={ctrls}
-      variants={AnimationSkill}
-    />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay, duration: 0.6 }}
+      className="relative flex flex-col items-center"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {/* Gambar logo */}
+      <motion.div
+        whileHover={{ scale: 1.15 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="flex items-center justify-center"
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={60}
+          height={60}
+          className={`${className} transition-transform duration-300`}
+        />
+      </motion.div>
+
+      {/* Teks alt muncul saat hover */}
+      <motion.span
+        initial={{ opacity: 0, y: 5 }}
+        animate={hovered ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }}
+        transition={{ duration: 0.3 }}
+        className="absolute -bottom-6 text-sm font-medium text-gray-400"
+      >
+        {alt}
+      </motion.span>
+    </motion.div>
   )
 }

@@ -1,24 +1,24 @@
 export const experiences = [
   {
     id: 1,
-    title: "Teaching Assistant",
+    title: "Lecturer Assistant",
     period: "Sep 2025 - Present",
     company: "BINUS University",
     description:
-      "- Assisted in teaching Computational Physics (Anaconda PPE) by mentoring students ",
+      "- Assisted in teaching Computational Physics (Anaconda PPE) by mentoring students...",
     fullDescription:
-      "- Assisted in teaching Computational Physics (Anaconda PPE) by mentoring students in practical labs, debugging code, and explaining concepts to strengthen understanding.     - Supported lecturers in class delivery, providing guidance and clarification during lectures.",
+      "- Assisted in teaching Computational Physics (Anaconda PPE) by mentoring students in practical labs and explaining concepts to strengthen understanding.\n\n- Supported lecturers in class delivery, providing guidance and clarification during lectures.",
     image: "/images/TA.png",
   },
   {
     id: 2,
-    title: "Teaching Assistant (Full Time)",
+    title: "Teaching Assistant (Full Teaching)",
     period: "Feb 2025 - Present",
     company: "BINUS University",
     description:
-      "Responsible for 3 classes (75 students) per semester, independently delivering lectures and hands-on coding sessions.",
+      "- Responsible for 3 classes (75 students) per semester, independently delivering...",
     fullDescription:
-      "Responsible for 3 classes (75 students) per semester, independently delivering lectures and hands-on coding sessions. - Even Semester 2024: Taught Data Structures (C Programming) and Scientific Computing (Python), enhancing students’ algorithmic thinking, debugging skills, and numerical problem-solving. - Odd Semester 2025: Taught Database Technology (MySQL), focusing on database design and query optimization, and Computational Physics (Anaconda PPE), emphasizing applied scientific computation.",
+      "- Responsible for 3 classes (75 students) per semester, delivering lectures and hands-on coding sessions.\n\n - Even Semester 2024: Taught Data Structures (C Programming) and Scientific Computing (Python), strengthening students’ algorithmic thinking, debugging, and analytical skills.\n\n - Odd Semester 2025: Taught Database Technology (MySQL), focusing on database design and query optimization.",
     image: "/images/TA-FT.png",
   },
   {
@@ -27,53 +27,53 @@ export const experiences = [
     period: "Feb 2025 - Jul 2025",
     company: "BINUS University",
     description:
-      "Developed and maintained web applications using modern JavaScript frameworks. Participated in code reviews",
+      "- Mentored 11 Computer Science students through 80+ academic improvement sessions...",
     fullDescription:
-      "Developed and maintained web applications using modern JavaScript frameworks. Participated in code reviews and contributed to the development of new features. Gained experience with agile development methodologies and version control systems. Worked on both frontend and backend components, including API development and database design. Contributed to the company's open-source projects and documentation.",
+      "- Mentored 11 Computer Science students through 80+ academic improvement sessions; 8 mentees reported significant improvement and satisfaction. \n\n - Guided mentees in a community service project, enabling +5 additional service hours. \n\n -Conducted tutoring sessions for all Computer Science students prior to midterm and final exams, improving preparedness across multiple courses.",
     image: "/images/DUBIN.png",
   },
   {
     id: 4,
-    title: "Chief Executive Officer",
+    title: "Chief Executive Officer (President)",
     period: "Sept 2024 - Present",
     company: "Bina Nusantara Computer Club (BNCC)",
     description:
-      "Built end-to-end web applications from concept to deployment. Worked with various technologies including Node.js, React, and cloud platforms.",
+      "- led 4 divisions with 20 staff and 45 activists, engaging 205+...",
     fullDescription:
-      "Built end-to-end web applications from concept to deployment. Worked with various technologies including Node.js, React, and cloud platforms. Designed and implemented RESTful APIs and microservices architecture. Collaborated with product managers and stakeholders to define technical requirements. Optimized application performance and implemented security best practices.",
+      "- led 4 divisions with 20 staff and 45 activists, engaging 205+ active members.\n\n - Executed 7+ strategic programs improving member engagement and technical capabilities.\n\n - Established a new R&D Division focusing on internal development and innovation projects.\n\n - Expanded BNCC’s external visibility by increasing social media engagement by 40% and forming 10+ new partnerships.",
     image: "/images/BNCC.png",
   },
   {
     id: 5,
     title: "Freshmen Partner",
     period: "Sept 2024 - Mei 2025",
-    company: "BINUS University",
+    company: " First Year Program BINUS",
     description:
-      "Created responsive websites for various clients using HTML, CSS, and JavaScript. Learned modern development practices and version control.",
+      "- As Freshmen Partner, provided year-long mentorship and academic support for two semesters...",
     fullDescription:
-      "Created responsive websites for various clients using HTML, CSS, and JavaScript. Learned modern development practices and version control. Worked on multiple client projects simultaneously and improved time management skills. Gained experience with content management systems and e-commerce platforms. Participated in client meetings and requirement gathering sessions.",
+      "- As Freshmen Partner, provided year-long mentorship and academic support for two semesters. \n\n - Led the Friend Project, where 10 freshmen earned 10 additional Community Service Hours through collaborative initiatives.",
     image: "/images/FP.png",
   },
   {
     id: 6,
     title: "Freshmen Leader",
     period: "Jun 2024 - Aug 2024",
-    company: "BINUS University",
+    company: "First Year Program BINUS",
     description:
-      "Provided web development services to small businesses and startups. Built custom websites and web applications based on client requirements.",
+      "- As Freshmen Leader, guided and mentored 50 new Computer Science students during university transition...",
     fullDescription:
-      "Provided web development services to small businesses and startups. Built custom websites and web applications based on client requirements. Managed client relationships and project timelines independently. Developed skills in project management and client communication. Worked with various technologies and frameworks based on project needs.",
+      "- As Freshmen Leader, guided and mentored 50 new Computer Science students during university transition. \n\n - Organized orientation and team-building sessions to foster collaboration and adaptation.",
     image: "/images/FL.png",
   },
   {
     id: 7,
-    title: "Aktivis Learning & Training",
+    title: "Aktivis Learning & Training (LnT)",
     period: "Okt 2023 - Sept 2024",
     company: "Bina Nusantara Computer Club (BNCC)",
     description:
-      "Completed intensive 6-month full-stack web development program. Learned.",
+      "- Oversaw LnT (Learning and Training) class operations...",
     fullDescription:
-      "Completed intensive 6-month full-stack web development program. Learned modern web technologies and best practices.",
+      "- Oversaw LnT (Learning and Training) class operations, ensuring smooth session flow, accurate attendance tracking, and timely documentation. \n\n - Collaborated with cross-functional teams to enhance class management efficiency and member engagement. \n\n - Led 10+ staff as Event Coordinator for BNCC Opening Season, successfully attracting 202 new active members. ",
     image: "/images/Aktivis 1.png",
   },
   {
@@ -82,9 +82,9 @@ export const experiences = [
     period: "Nov 2022 - Jun 2023",
     company: "BINUS University",
     description:
-      "Worked on UI-focused projects, building landing pages and interactive web components.",
+      "- Selected among hundreds of students to deliver product knowledge to target audiences",
     fullDescription:
-      "Worked on UI-focused projects, building landing pages and interactive web components. Collaborated with designers to create responsive layouts and animations. Improved SEO performance of websites by 20%.",
+      "- Selected among hundreds of students to deliver product knowledge to target audiences.\n\n - Executed social media marketing campaigns on Instagram.\n\n - Created soft-selling video content (Top 3 best content on Double Degree program).",
     image: "/images/BRAVE.png",
   },
 ]

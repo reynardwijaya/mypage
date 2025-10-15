@@ -33,7 +33,7 @@ export default function NavHome() {
           <Link href="/" className="group inline-flex items-center gap-x-2">
             <Code2 className="h-6 w-6 text-white transition-transform duration-300 ease-in-out group-hover:rotate-[20deg]" />
             <p className="text-md font-semibold uppercase text-white">
-              Reynard Wijaya&apos;s Portofolio
+              Reynard Wijaya | Portofolio
             </p>
           </Link>
         </div>

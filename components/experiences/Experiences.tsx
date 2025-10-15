@@ -9,35 +9,24 @@ import { experienceCardAnimation } from "./animationCard"
 import ExperienceTitleAnimate from "./ExperienceTitleAnimate"
 
 export default function Experiences() {
-  // State untuk halaman carousel saat ini
   const [currentPage, setCurrentPage] = useState(0)
 
-  // Jumlah card per halaman untuk desktop dan mobile
+  // Pengaturan jumlah kartu per halaman
   const cardsPerPageDesktop = 4
   const cardsPerPageMobile = 1
-
-  // Cek viewport untuk menentukan jumlah card per halaman
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768
   const cardsPerPage = isMobile ? cardsPerPageMobile : cardsPerPageDesktop
-
-  // Total halaman berdasarkan jumlah data dan cardsPerPage
   const totalPages = Math.ceil(experiences.length / cardsPerPage)
 
-  // Fungsi navigasi ke halaman berikutnya
+  // Navigasi antar halaman
   const nextPage = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage((prev) => prev + 1)
-    }
+    if (currentPage < totalPages - 1) setCurrentPage((prev) => prev + 1)
   }
-
-  // Fungsi navigasi ke halaman sebelumnya
   const prevPage = () => {
-    if (currentPage > 0) {
-      setCurrentPage((prev) => prev - 1)
-    }
+    if (currentPage > 0) setCurrentPage((prev) => prev - 1)
   }
 
-  // Slice data sesuai halaman saat ini
+  // Data kartu untuk halaman saat ini
   const currentCards = experiences.slice(
     currentPage * cardsPerPage,
     currentPage * cardsPerPage + cardsPerPage
@@ -46,14 +35,10 @@ export default function Experiences() {
   return (
     <section id="experiences" className="w-full py-12">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Title dengan animasi */}
         <ExperienceTitleAnimate />
 
-        {/* ========================= */}
-        {/* Desktop View: grid card + tombol absolute */}
-        {/* ========================= */}
+        {/* DESKTOP VIEW */}
         <div className="relative w-full hidden md:block">
-          {/* Grid card */}
           <motion.div
             key={currentPage}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -61,9 +46,7 @@ export default function Experiences() {
             animate="visible"
             variants={{
               hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.2 },
-              },
+              visible: { transition: { staggerChildren: 0.2 } },
             }}
           >
             {currentCards.map((exp) => (
@@ -73,36 +56,36 @@ export default function Experiences() {
             ))}
           </motion.div>
 
-          {/* Tombol navigasi kiri */}
+          {/* Tombol kiri */}
           <button
             onClick={prevPage}
             disabled={currentPage === 0}
-            className="absolute top-1/2 -translate-y-1/2 left-[-24px] 
-                       z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30"
+            className="absolute top-1/2 -translate-y-1/2 left-[-64px]
+                       z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 
+                       disabled:opacity-30 transition-all"
           >
             <ChevronLeft className="w-6 h-6 text-white" />
           </button>
 
-          {/* Tombol navigasi kanan */}
+          {/* Tombol kanan */}
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages - 1}
-            className="absolute top-1/2 -translate-y-1/2 right-[-24px] 
-                       z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30"
+            className="absolute top-1/2 -translate-y-1/2 right-[-64px]
+                       z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 
+                       disabled:opacity-30 transition-all"
           >
             <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        {/* ========================= */}
-        {/* Mobile View: 1 card per halaman + tombol di kiri-kanan */}
-        {/* ========================= */}
-        <div className="relative md:hidden flex justify-center items-center mt-6 px-8">
-          {/* Card */}
+        {/* MOBILE VIEW */}
+        <div className="relative md:hidden flex justify-center items-center mt-6">
+          {/* Kartu utama */}
           <motion.div
             key={currentPage}
             variants={experienceCardAnimation}
-            className="max-w-xs w-full"
+            className="max-w-xs w-full flex justify-center"
           >
             <ExperienceCard {...currentCards[0]} />
           </motion.div>
@@ -111,8 +94,10 @@ export default function Experiences() {
           <button
             onClick={prevPage}
             disabled={currentPage === 0}
-            className="absolute left-0 top-1/2 -translate-y-1/2
-                       z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30"
+            className="absolute top-1/2 -translate-y-1/2
+                       left-[calc(50%-180px)]
+                       z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 
+                       disabled:opacity-30 backdrop-blur-sm transition-all"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
@@ -121,8 +106,10 @@ export default function Experiences() {
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages - 1}
-            className="absolute right-0 top-1/2 -translate-y-1/2
-                       z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30"
+            className="absolute top-1/2 -translate-y-1/2
+                       right-[calc(50%-180px)]
+                       z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 
+                       disabled:opacity-30 backdrop-blur-sm transition-all"
           >
             <ChevronRight className="w-5 h-5 text-white" />
           </button>

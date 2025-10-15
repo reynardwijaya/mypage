@@ -104,10 +104,10 @@ export default function ExperienceCard({
       animate={ctrls}
       initial="hidden"
       variants={experienceCardDescriptionAnimation}
-      className="mt-3 flex flex-col"
+      className="mt-3 flex flex-col mb-24"
     >
       <p
-        className={`text-sm text-white/70 leading-relaxed transition-all duration-300 ${
+        className={`whitespace-pre-line text-sm text-white/70 leading-relaxed transition-all duration-300 ${
           isExpanded ? "line-clamp-none" : "line-clamp-3"
         }`}
       >

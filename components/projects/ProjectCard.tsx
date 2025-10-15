@@ -61,7 +61,7 @@ export default function ProjectCard({
           height={600}
           src={image}
           alt={title}
-          className="absolute -bottom-2 right-0 w-[85%] object-contain md:w-[60%] lg:max-w-[55%]"
+          className="absolute -bottom-2 right-[-8px] w-[85%] object-contain md:w-[60%] lg:max-w-[55%]"
         />
       </motion.div>
       <motion.div

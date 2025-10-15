@@ -29,7 +29,7 @@ export default function AnimatePict({
   const AnimationImage = {
     hidden: {
       opacity: 0,
-      y: "2em", // posisi lebih turun biar efek naik jelas
+      y: "2em", 
     },
     visible: {
       opacity: 1,
