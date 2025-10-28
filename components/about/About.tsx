@@ -67,19 +67,19 @@ export default function About() {
           <div className="lg:mg-16 mb-10 flex w-full flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide md:mb-16 md:gap-6 md:text-lg md:leading-relaxed lg:max-w-[90%]">
             <AnimateParagraph
               paragraph="Hi! I’m a fifth-semester Computer Science student with experience as a Teaching Assistant, Duta BINUSIAN Scholarship awardee, Top 3 peer mentor, and organizational leader."
-              delay={1.5}
+              delay={0.5}
             />
             <AnimateParagraph
               paragraph="I have strong foundations in web and app development, combined with proven leadership and collaborative teamwork skills."
-              delay={1.8}
+              delay={0.8}
             />
             <AnimateParagraph
               paragraph="Driven by curiosity and a growth mindset, I’m passionate about continuous learning and creating impactful, user-centered digital solutions."
-              delay={2}
+              delay={1.0}
             />
             <AnimateParagraph
               paragraph="I’m eager to keep growing as a developer, collaborate with inspiring people, and build meaningful products that bring value to users."
-              delay={2.5}
+              delay={1.2}
             />
           </div>
 
@@ -116,7 +116,7 @@ export default function About() {
                 src="/images/avatar.png"
                 alt="Avatar"
                 className="w-60 h-60 object-cover"
-                delay={0.8}
+                delay={0.5}
               />
             </div>
           </div>
